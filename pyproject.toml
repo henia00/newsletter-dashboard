@@ -1,0 +1,109 @@
+[tool.poetry]
+name = "newsletter-dashboard"
+version = "0.1.0"
+description = ""
+authors = ["henia00 <henia00@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+django = "^5.0.6"
+ruff = "^0.4.4"
+pre-commit = "^3.7.1"
+
+[tool.ruff]
+line-length = 120
+exclude = []
+
+[tool.ruff.lint]
+select = [
+    "F",        # Pyflakes
+    "E",        # pycodestyle
+    "W",        # pycodestyle
+    "I",        # isort
+    "N",        # pep8-naming
+    "D",        # pydocstyle
+    "UP",       # pyupgrade
+    "YTT",      # flake8-2020
+    "ANN",      # flake8-annotations
+    "ASYNC",    # flake8-async
+    "TRIO",     # flake8-trio
+    "S",        # flake8-bandit
+    "BLE",      # flake8-blind-except
+    "FBT",      # flake8-boolean-trap
+    "B",        # flake8-bugbear
+    "A",        # flake8-builtins
+    "COM",      # flake8-commas
+    "C4",       # flake8-comprehensions
+    "DTZ",      # flake8-datetimez
+    "T10",      # flake8-debugger
+    "DJ",       # flake8-django
+    "EM",       # flake8-errmsg
+    "EXE",      # flake8-executable
+    "FA",       # flake8-future-annotations
+    "ISC",      # flake8-implicit-str-concat
+    "ICN",      # flake8-import-conventions
+    "G",        # flake8-logging-format
+    "INP",      # flake8-no-pep420
+    "PIE",      # flake8-pie
+    "T20",      # flake8-print
+    "PYI",      # flake8-pyi
+    "PT",       # flake8-pytest
+    "Q",        # flake8-quotes
+    "RSE",      # flake8-raise
+    "RET",      # flake8-return
+    "SLF",      # flake8-self
+    "SLOT",     # flake8-slot
+    "SIM",      # flake8-simplify
+    "TID",      # flake8-tidy-imports
+    "TCH",      # flake8-type-checking
+    "INT",      # flake8-gettext
+    "ARG",      # flake8-unused-arguments
+    "PTH",      # flake8-use-pathlib
+    "TD",       # flake8-todos
+    "FIX",      # flake8-fixmee
+    "ERA",      # eradicate
+    "PD",       # pandas-vet
+    "PGH",      # pygrep-hooks
+    "PL",       # Pylint
+    "TRY",      # tryceratops
+    "FLY",      # flynt
+    "NPY",      # NumPy-specific rules
+    "AIR",      # Airflow-specific rules
+    "PERF",     # Perflint
+    # "FURB",     # refurb  # TODO(bartosz): enable when it's ready
+    "LOG",      # flake8-logging
+    "RUF",      # Ruff-specific rules
+]
+ignore = [
+    "W191",     # indentation contains tabs
+    "E111",     # indentation is not a multiple of four
+    "E114",     # indentation is not a multiple of four (comment)
+    "E117",     # over-indented
+    'D203',     # one-blank-line-before-class
+    "D206",     # docstring should be indented with spaces, not tabs
+    "D213",     # multi-line-summary-second-line
+    "D300",     # Use """triple double quotes"""
+    "Q000",     # Remove bad quotes inline string
+    "Q001",     # Remove bad quotes multiline
+    "Q002",     # Remove bad quotes docstring
+    "Q003",     # Avoid using backslash to escape quotes
+    "COM812",   # missing whitespace after ',' (comment)
+    "COM819",   # Prohibit trailing whitespace in comment
+    "ISC001",   # Single line implicit string concatenation
+    "ISC002",   # Multiline implicit string concatenation
+    "S101",     # Use of assert detected
+    "SLF001",   # Private member accessed outside class
+    "RUF012",   # Mutable class attributes should be annotated with `typing.ClassVar`
+    "ANN101",   # Missing type annotation for self
+    "ANN002",   # Missing type annotation for *args
+    "ANN003",   # Missing type annotation for **kwargs
+    "ANN102",   # Missing type annotation for cls
+    "D100",     # Missing docstring in public module
+    "D106",     # Missing docstring in public nested class
+    'T201',     # Ignore print
+]
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
